@@ -2,7 +2,7 @@
 ## Đồ án cuối kỳ làm đề tài thương mại điện tử
 
 ## Thành viên:
-- Hoàng Lê Hữu Châu
+- Hoàng Lê Hữu Châu (nhóm trưởng)
 - Lê Minh Ngọc
 - Nguyễn Hoàng Kỳ
 - Phan Hoàng Minh Thuận
