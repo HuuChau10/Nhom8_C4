@@ -1,6 +1,13 @@
 # Nhóm 8
 ## Đồ án cuối kỳ làm đề tài thương mại điện tử
 
+## Thành viên:
+- Hoàng Lê Hữu Châu
+- Lê Minh Ngọc
+- Nguyễn Hoàng Kỳ
+- Phan Hoàng Minh Thuận
+- Nguyễn Ngọc Bảo
+
 ## Các câu lệnh:
 - Git checkout <tên nhánh>: di chuyển ra nhánh
 - Git merge <tên nhánh>: hợp nhất nhánh (nhánh chọn vào nhánh hiện tại)gitgit
