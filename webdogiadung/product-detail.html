@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Detail</title>
+  <link rel="stylesheet" href="./styles/productdetail.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo">Exclusive</div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About</a>
+        <a href="login.html">Login</a>
+      </nav>
+      <div class="header-icons">
+        <input type="text" placeholder="Search" class="search-bar">
+        <a href="wishlist.html" class="icon">♥</a>
+        <a href="cart.html" class="icon">🛒</a>
+        <a href="profile.html" class="icon">👤</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="product-detail">
+      <div class="image-section">
+        <img id="product-image" src="" alt="Product Image" />
+      </div>
+      <div class="info-section">
+        <h1 id="product-name">Loading...</h1>
+        <p class="description" id="product-description"></p>
+        <p class="price">
+          <span id="product-price">$0</span>
+          <span class="old-price" id="product-old-price"></span>
+        </p>
+        <p id="product-stock"></p>
+
+        <div class="colors">
+          <h4>Colors:</h4>
+          <div id="product-colors"></div>
+        </div>
+
+        <div class="sizes">
+          <h4>Sizes:</h4>
+          <div id="product-sizes"></div>
+        </div>
+
+        <div class="quantity">
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" min="1" value="1" />
+        </div>
+
+        <button class="add-to-cart">Add to Cart</button>
+        <button class="wishlist">Add to Wishlist</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="product-data.js"></script>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = parseInt(urlParams.get('id'));
+    const product = products.find(p => p.id === productId);
+
+    if (product) {
+      document.getElementById("product-name").textContent = product.name;
+      document.getElementById("product-image").src = product.image;
+      document.getElementById("product-description").textContent = product.description;
+      document.getElementById("product-price").textContent = `$${product.price}`;
+      document.getElementById("product-old-price").textContent = product.oldPrice ? `$${product.oldPrice}` : '';
+      document.getElementById("product-stock").textContent = product.stock ? "In Stock" : "Out of Stock";
+
+      const colorContainer = document.getElementById("product-colors");
+      product.colours.forEach(color => {
+        const span = document.createElement("span");
+        span.className = "color-dot";
+        span.style.backgroundColor = color;
+        colorContainer.appendChild(span);
+      });
+
+      const sizeContainer = document.getElementById("product-sizes");
+      product.sizes.forEach(size => {
+        const btn = document.createElement("button");
+        btn.className = "size-button";
+        btn.textContent = size;
+        sizeContainer.appendChild(btn);
+      });
+    } else {
+      document.querySelector(".product-detail").innerHTML = "<p>Product not found.</p>";
+    }
+  </script>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-columns">
+      <div>
+        <h3>Exclusive</h3>
+        <p>Get 10% off your first order</p>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <ul>
+          <li>Help Center</li>
+          <li>Returns</li>
+          <li>Shipping</li>
+          <li>Etc.</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Quick Link</h4>
+        <ul>
+          <li>Privacy</li>
+          <li>terms</li>
+          <li>FAQs</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Download App</h4>
+        <img src="https://via.placeholder.com/100x30?text=App+QR" alt="QR Code">
+      </div>
+    </div>
+    <p class="copyright">© Copyright Exclusive 2025. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

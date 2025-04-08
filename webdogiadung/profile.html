@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Profile - WEBGIADUNG</title>
+  <link rel="stylesheet" href="./styles/profile.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo">Exclusive</div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About</a>
+        <a href="login.html">Login</a>
+      </nav>
+      <div class="header-icons">
+        <input type="text" placeholder="Search" class="search-bar">
+        <a href="wishlist.html" class="icon">♥</a>
+        <a href="cart.html" class="icon">🛒</a>
+        <a href="profile.html" class="icon">👤</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Account Section -->
+  <section class="account-container">
+    <div class="account-sidebar">
+      <h3>Manage My Account</h3>
+      <ul>
+        <li><a href="#">My Profile</a></li>
+        <li><a href="#">Address Book</a></li>
+        <li><a href="#">My Payment Options</a></li>
+      </ul>
+      <h3>My Orders</h3>
+      <ul>
+        <li><a href="#">My Returns</a></li>
+        <li><a href="#">My Cancellations</a></li>
+      </ul>
+      <h3><a href="#">My Wishlist</a></h3>
+    </div>
+
+    <div class="account-content">
+      <div class="breadcrumb">
+        <p>Home / My Account</p>
+        <p>Welcome <span style="color:red;">Bimal</span></p>
+      </div>
+
+      <div class="profile-form">
+        <h2>Edit Your Profile</h2>
+        <form>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" placeholder="Bimal">
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" placeholder="Rimal">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="rimalbimal@gmail.com">
+            </div>
+            <div class="form-group">
+              <label for="address">Address</label>
+              <input type="text" id="address" placeholder="Kingston, 53224, United States">
+            </div>
+          </div>
+
+          <h3>Password Changes</h3>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="currentPass">Current Password</label>
+              <input type="password" id="currentPass" placeholder="Enter Current Password">
+            </div>
+            <div class="form-group">
+              <label for="newPass">New Password</label>
+              <input type="password" id="newPass" placeholder="Enter New Password">
+            </div>
+            <div class="form-group">
+              <label for="confirmPass">Confirm New Password</label>
+              <input type="password" id="confirmPass" placeholder="Confirm New Password">
+            </div>
+          </div>
+
+          <div class="form-buttons">
+            <button type="button" class="btn-secondary">Cancel</button>
+            <button type="submit" class="btn-primary">Save Changes</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-columns">
+        <div>
+          <h3>Exclusive</h3>
+          <p>Get 10% off your first order</p>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <ul>
+            <li>Help Center</li>
+            <li>Returns</li>
+            <li>Shipping</li>
+            <li>Etc.</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Quick Link</h4>
+          <ul>
+            <li>Privacy</li>
+            <li>terms</li>
+            <li>FAQs</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Download App</h4>
+          <img src="https://via.placeholder.com/100x30?text=App+QR" alt="QR Code">
+        </div>
+      </div>
+      <p class="copyright">© Copyright Exclusive 2025. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
